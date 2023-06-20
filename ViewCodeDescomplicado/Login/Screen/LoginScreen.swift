@@ -19,9 +19,7 @@ class LoginScreen: UIView {
     func delegate(delegate: LoginScreenProtocol) {
         self.delegate = delegate
     }
-    
-    // Lazy torna o elemento fraco, ele só é lido pelo compilador quando é chamado
-    
+        
     lazy var loginLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -49,7 +47,6 @@ class LoginScreen: UIView {
         tf.keyboardType = .emailAddress
         tf.placeholder = "Digite seu email"
         tf.textColor = .darkGray
-        
         return tf
     }()
     
@@ -122,6 +119,7 @@ class LoginScreen: UIView {
     @objc func tappedRegisterButton() {
         delegate?.actionRegisterButton()
     }
+    
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
