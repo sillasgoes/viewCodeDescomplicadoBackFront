@@ -13,13 +13,13 @@ protocol LoginScreenProtocol: AnyObject {
 }
 
 class LoginScreen: UIView {
-
+    
     private weak var delegate: LoginScreenProtocol?
     
     func delegate(delegate: LoginScreenProtocol) {
         self.delegate = delegate
     }
-        
+    
     lazy var loginLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -30,7 +30,7 @@ class LoginScreen: UIView {
     }()
     
     lazy var logoAppImageView: UIImageView = {
-       let image = UIImageView()
+        let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.tintColor = .red
         image.image = UIImage(named: "whats")
@@ -111,7 +111,7 @@ class LoginScreen: UIView {
         emailTextField.delegate = delegate
         passwordTextField.delegate = delegate
     }
-     
+    
     @objc func tappedLoginButton() {
         delegate?.actionLoginButton()
     }
@@ -119,7 +119,6 @@ class LoginScreen: UIView {
     @objc func tappedRegisterButton() {
         delegate?.actionRegisterButton()
     }
-    
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
