@@ -48,7 +48,7 @@ class RegisterView: UIView {
         tf.autocorrectionType = .no
         tf.backgroundColor = .white
         tf.borderStyle = .roundedRect
-        tf.keyboardType = .emailAddress
+        tf.keyboardType = .default
         tf.placeholder = "Digite sua Senha"
         tf.font = UIFont.systemFont(ofSize: 14)
         tf.layer.cornerRadius = 7.5
@@ -74,6 +74,11 @@ class RegisterView: UIView {
         backgroundColor = .white
         setupView()
         setupConstraints()
+    }
+    
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        emailTextField.delegate = delegate
+        passwordTextField.delegate = delegate
     }
     
     required init?(coder: NSCoder) {

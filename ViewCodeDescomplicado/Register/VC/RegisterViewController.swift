@@ -18,5 +18,10 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerScreen?.configTextFieldDelegate(delegate: self)
     }
+}
+
+extension RegisterViewController: UITextFieldDelegate {
+    
 }
