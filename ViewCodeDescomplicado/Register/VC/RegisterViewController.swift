@@ -37,7 +37,13 @@ extension RegisterViewController: RegisterScreenProtocol {
         navigationController?.popViewController(animated: true)
     }
     
-    func actionRegisterButton() {
-        print("Chegou register button")
+    func actionRegisterButton(_ type: typeAction) {
+        if type == .success {
+            print("Sucesso")
+        } else {
+            let alert = UIAlertController(title: "Atenção", message: "Os dois campos devem ser preenchidos", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+        }
     }
 }
