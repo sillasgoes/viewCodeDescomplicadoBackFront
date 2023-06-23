@@ -105,30 +105,12 @@ class RegisterScreen: UIView {
     
     @objc func tappedRegisterButton() {
         
-        guard validate() else {
+        guard Utils.validate(email: emailTextField.text, password: passwordTextField.text) else {
             delegate?.actionRegisterButton(.failure)
             return
         }
         
         delegate?.actionRegisterButton(.success)
-    }
-    
-    func validate() -> Bool {
-        
-        guard let email = emailTextField.text, let password = passwordTextField.text else {
-            return false
-        }
-        
-        guard !email.trimmingCharacters(in: .whitespaces).isEmpty,
-              !password.trimmingCharacters(in: .whitespaces).isEmpty else {
-            return false
-        }
-        
-        guard email.contains("@") && email.contains(".") else {
-            return false
-        }
-        
-        return true
     }
     
     required init?(coder: NSCoder) {
