@@ -105,7 +105,7 @@ class RegisterScreen: UIView {
     
     @objc func tappedRegisterButton() {
         
-        guard Utils.validate(email: emailTextField.text, password: passwordTextField.text) else {
+        guard Utils.Email.validate(email: emailTextField.text, password: passwordTextField.text) else {
             delegate?.actionRegisterButton(.failure)
             return
         }

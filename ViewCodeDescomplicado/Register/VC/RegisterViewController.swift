@@ -24,10 +24,12 @@ class RegisterViewController: UIViewController {
 }
 
 extension RegisterViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
+    
 }
 
 extension RegisterViewController: RegisterScreenProtocol {

@@ -31,8 +31,15 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginScreenProtocol {
     
-    func actionLoginButton() {
-        // Action
+    func actionLoginButton(_ action: TypeAction) {
+       
+        if action == .success {
+            //
+        } else {
+            let alert = UIAlertController(title: "Atenção", message: "Preencha os dois campos", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+        }
     }
     
     func actionRegisterButton() {

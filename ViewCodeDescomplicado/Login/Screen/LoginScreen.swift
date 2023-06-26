@@ -7,8 +7,13 @@
 
 import UIKit
 
+enum TypeAction {
+    case success
+    case failure
+}
+
 protocol LoginScreenProtocol: AnyObject {
-    func actionLoginButton()
+    func actionLoginButton(_ action: TypeAction)
     func actionRegisterButton()
 }
 
@@ -113,7 +118,12 @@ class LoginScreen: UIView {
     }
     
     @objc func tappedLoginButton() {
-        delegate?.actionLoginButton()
+        guard Utils.Email.validate(email: emailTextField.text, password: passwordTextField.text) else {
+            delegate?.actionLoginButton(.failure)
+            return
+        }
+        
+        delegate?.actionLoginButton(.success)
     }
     
     @objc func tappedRegisterButton() {
