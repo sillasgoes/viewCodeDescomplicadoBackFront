@@ -8,9 +8,7 @@
 import Foundation
 
 class Utils {
-
     class Email {
-        
         static func validate(email: String?, password: String?) -> Bool {
             
             guard let email = email, let password = password else {

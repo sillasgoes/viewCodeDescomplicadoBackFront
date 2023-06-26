@@ -29,7 +29,6 @@ extension RegisterViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
 }
 
 extension RegisterViewController: RegisterScreenProtocol {

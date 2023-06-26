@@ -109,7 +109,6 @@ class RegisterScreen: UIView {
             delegate?.actionRegisterButton(.failure)
             return
         }
-        
         delegate?.actionRegisterButton(.success)
     }
     

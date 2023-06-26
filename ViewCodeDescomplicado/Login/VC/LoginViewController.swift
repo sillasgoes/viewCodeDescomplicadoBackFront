@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class LoginViewController: UIViewController {
     
     var loginScreen: LoginScreen?
@@ -32,7 +31,6 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginScreenProtocol {
     
     func actionLoginButton(_ action: TypeAction) {
-       
         if action == .success {
             //
         } else {
