@@ -55,7 +55,8 @@ class LoginScreen: UIView {
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.autocorrectionType = .no
         tf.backgroundColor = .white
-        tf.borderStyle = .line
+        tf.layer.cornerRadius = 7.5
+        tf.layer.borderWidth = 1
         tf.keyboardType = .emailAddress
         tf.placeholder = "Digite seu email"
         tf.textColor = .darkGray
@@ -68,10 +69,10 @@ class LoginScreen: UIView {
         tf.autocorrectionType = .no
         tf.backgroundColor = .white
         tf.isSecureTextEntry = true
-        tf.borderStyle =  .line
+        tf.layer.cornerRadius = 7.5
+        tf.layer.borderWidth = 1
         tf.keyboardType = .default
         tf.placeholder = "Digite sua senha"
-        tf.placeholderRect(forBounds: .init(x: 10, y: 40, width: 10, height: 10))
         tf.textColor = .darkGray
         return tf
     }()
