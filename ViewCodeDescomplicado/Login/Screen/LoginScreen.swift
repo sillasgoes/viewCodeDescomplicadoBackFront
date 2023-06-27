@@ -140,6 +140,14 @@ class LoginScreen: UIView {
         delegate?.actionRegisterButton()
     }
     
+    func getEmail() -> String {
+        return emailTextField.text ?? ""
+    }
+    
+    func getPassword() -> String {
+        return passwordTextField.text ?? ""
+    }
+    
     // MARK: - SnapKit funcs
     
     func configConstraints() {

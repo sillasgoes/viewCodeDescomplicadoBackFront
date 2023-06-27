@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
     
     var registerScreen: RegisterScreen?
+    
+    var auth: Auth?
     
     override func loadView() {
         registerScreen = RegisterScreen()
@@ -20,6 +23,7 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         registerScreen?.configTextFieldDelegate(delegate: self)
         registerScreen?.delegate(delegate: self)
+        auth = Auth.auth()
     }
 }
 
@@ -39,7 +43,16 @@ extension RegisterViewController: RegisterScreenProtocol {
     
     func actionRegisterButton(_ type: typeAction) {
         if type == .success {
-            print("Sucesso")
+            
+            guard let registerScreen = registerScreen else { return }
+
+            auth?.createUser(withEmail: registerScreen.getEmail(), password: registerScreen.getPassword()) { result, error in
+                guard let result = result else  {
+                    print("ERROR: \(String(describing: error?.localizedDescription))")
+                          return
+                }
+            }
+            
         } else {
             let alert = UIAlertController(title: "Atenção", message: "Os dois campos devem ser preenchidos", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))

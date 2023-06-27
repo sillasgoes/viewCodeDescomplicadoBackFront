@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
     var loginScreen: LoginScreen?
+    var auth: Auth?
     
     override func loadView() {
         loginScreen = LoginScreen()
@@ -20,6 +22,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         loginScreen?.configTextFieldDelegate(delegate: self)
         loginScreen?.delegate(delegate: self)
+        auth = Auth.auth()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +35,20 @@ extension LoginViewController: LoginScreenProtocol {
     
     func actionLoginButton(_ action: TypeAction) {
         if action == .success {
-            //
+            
+            guard let loginScreen = loginScreen else { return }
+            
+            auth?.signIn(withEmail: loginScreen.getEmail(), password: loginScreen.getPassword()) { result, error in
+                
+                guard let result = result else {
+                    print("Error no login \(error?.localizedDescription ?? "")")
+                    return
+                }
+                
+                print("Resultado do login \(result.description)")
+                
+            }
+            
         } else {
             let alert = UIAlertController(title: "Atenção", message: "Preencha os dois campos", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
