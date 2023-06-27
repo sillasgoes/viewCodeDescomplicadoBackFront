@@ -11,6 +11,7 @@
 		98126B572A4B57DD0023613E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 98126B562A4B57DD0023613E /* FirebaseAuth */; };
 		98126B592A4B57DD0023613E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 98126B582A4B57DD0023613E /* FirebaseFirestoreSwift */; };
 		98126B5B2A4B57DD0023613E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 98126B5A2A4B57DD0023613E /* FirebaseStorage */; };
+		98126B5E2A4B7B5D0023613E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98126B5D2A4B7B5D0023613E /* Alert.swift */; };
 		9825E07B2A466628009A2C19 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9825E07A2A466628009A2C19 /* Utils.swift */; };
 		982E7B682A41134B00B7A948 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982E7B672A41134B00B7A948 /* RegisterViewController.swift */; };
 		982E7B6A2A41136A00B7A948 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982E7B692A41136A00B7A948 /* RegisterScreen.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		98126B532A4B573B0023613E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		98126B5D2A4B7B5D0023613E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		9825E07A2A466628009A2C19 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		982E7B672A41134B00B7A948 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		982E7B692A41136A00B7A948 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98126B5C2A4B7B490023613E /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				98126B5D2A4B7B5D0023613E /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		982E7B632A4112F800B7A948 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +162,7 @@
 		98FE2D282A369F8D00353565 /* ViewCodeDescomplicado */ = {
 			isa = PBXGroup;
 			children = (
+				98126B5C2A4B7B490023613E /* Alert */,
 				98126B532A4B573B0023613E /* GoogleService-Info.plist */,
 				982E7B642A41130E00B7A948 /* Register */,
 				982E7B632A4112F800B7A948 /* Login */,
@@ -290,6 +301,7 @@
 				9825E07B2A466628009A2C19 /* Utils.swift in Sources */,
 				982E7B6A2A41136A00B7A948 /* RegisterScreen.swift in Sources */,
 				98FE2D2A2A369F8D00353565 /* AppDelegate.swift in Sources */,
+				98126B5E2A4B7B5D0023613E /* Alert.swift in Sources */,
 				98FE2D2C2A369F8D00353565 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
