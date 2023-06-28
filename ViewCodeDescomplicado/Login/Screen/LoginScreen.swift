@@ -128,10 +128,10 @@ class LoginScreen: UIView {
     }
     
     @objc func tappedLoginButton() {
-//        guard Utils.Email.validate(email: emailTextField.text, password: passwordTextField.text) else {
-//            delegate?.actionLoginButton(.failure)
-//            return
-//        }
+        guard Utils.Email.validate(email: emailTextField.text, password: passwordTextField.text) else {
+            delegate?.actionLoginButton(.failure)
+            return
+        }
         
         delegate?.actionLoginButton(.success)
     }

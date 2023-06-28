@@ -37,20 +37,20 @@ extension LoginViewController: LoginScreenProtocol {
     
     func actionLoginButton(_ action: TypeAction) {
 //        if action == .success {
-//            
+//
 //            guard let loginScreen = loginScreen else { return }
-//            
+//
 //            auth?.signIn(withEmail: loginScreen.getEmail(), password: loginScreen.getPassword()) { result, error in
-//                
+//
 //                guard let result = result else {
 //                    self.alert?.getAlert(title: "Atenção", message: "Dados incorretos, verique e tente novamente")
 //                    return
 //                }
-//                
+//
 //                print("Resultado do login \(result.description)")
-//                
+//
 //            }
-//            
+//
 //        } else {
 //            let alert = UIAlertController(title: "Atenção", message: "Preencha os dois campos", preferredStyle: .alert)
 //            alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -64,7 +64,7 @@ extension LoginViewController: LoginScreenProtocol {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
-
+    
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

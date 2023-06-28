@@ -12,6 +12,8 @@ class HomeScreen: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(UserDetailTableViewCell.self, forCellReuseIdentifier: UserDetailTableViewCell.identifier)
+        tableView.register(SportTableViewCell.self, forCellReuseIdentifier: SportTableViewCell.identifier)
         return tableView
     }()
     

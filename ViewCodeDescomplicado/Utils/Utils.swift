@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
-class Utils {
-    class Email {
+struct Utils {
+    struct Email {
         static func validate(email: String?, password: String?) -> Bool {
             
             guard let email = email, let password = password else {
@@ -27,4 +28,13 @@ class Utils {
             return true
         }
     }
+}
+
+extension UIImageView {
+
+   func setRounded() {
+      let radius = CGRectGetWidth(self.frame) / 2
+      self.layer.cornerRadius = radius
+      self.layer.masksToBounds = true
+   }
 }
