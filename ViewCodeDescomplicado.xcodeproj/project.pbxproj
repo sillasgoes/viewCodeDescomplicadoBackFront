@@ -12,6 +12,9 @@
 		98126B592A4B57DD0023613E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 98126B582A4B57DD0023613E /* FirebaseFirestoreSwift */; };
 		98126B5B2A4B57DD0023613E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 98126B5A2A4B57DD0023613E /* FirebaseStorage */; };
 		98126B5E2A4B7B5D0023613E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98126B5D2A4B7B5D0023613E /* Alert.swift */; };
+		98126B632A4B941C0023613E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98126B622A4B941C0023613E /* HomeViewController.swift */; };
+		98126B652A4B94300023613E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98126B642A4B94300023613E /* HomeScreen.swift */; };
+		98126B682A4C3AE70023613E /* UserDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98126B672A4C3AE70023613E /* UserDetailTableViewCell.swift */; };
 		9825E07B2A466628009A2C19 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9825E07A2A466628009A2C19 /* Utils.swift */; };
 		982E7B682A41134B00B7A948 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982E7B672A41134B00B7A948 /* RegisterViewController.swift */; };
 		982E7B6A2A41136A00B7A948 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982E7B692A41136A00B7A948 /* RegisterScreen.swift */; };
@@ -38,6 +41,9 @@
 /* Begin PBXFileReference section */
 		98126B532A4B573B0023613E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		98126B5D2A4B7B5D0023613E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		98126B622A4B941C0023613E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		98126B642A4B94300023613E /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		98126B672A4C3AE70023613E /* UserDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCell.swift; sourceTree = "<group>"; };
 		9825E07A2A466628009A2C19 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		982E7B672A41134B00B7A948 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		982E7B692A41136A00B7A948 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
@@ -81,6 +87,39 @@
 				98126B5D2A4B7B5D0023613E /* Alert.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		98126B5F2A4B93E80023613E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				98126B612A4B93F70023613E /* Screen */,
+				98126B602A4B93F10023613E /* VC */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		98126B602A4B93F10023613E /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				98126B622A4B941C0023613E /* HomeViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		98126B612A4B93F70023613E /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				98126B642A4B94300023613E /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		98126B662A4C394D0023613E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				98126B672A4C3AE70023613E /* UserDetailTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		982E7B632A4112F800B7A948 /* Login */ = {
@@ -162,6 +201,8 @@
 		98FE2D282A369F8D00353565 /* ViewCodeDescomplicado */ = {
 			isa = PBXGroup;
 			children = (
+				98126B662A4C394D0023613E /* Cells */,
+				98126B5F2A4B93E80023613E /* Home */,
 				98126B5C2A4B7B490023613E /* Alert */,
 				98126B532A4B573B0023613E /* GoogleService-Info.plist */,
 				982E7B642A41130E00B7A948 /* Register */,
@@ -296,10 +337,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				98FE2D2E2A369F8D00353565 /* LoginViewController.swift in Sources */,
+				98126B682A4C3AE70023613E /* UserDetailTableViewCell.swift in Sources */,
 				982E7B682A41134B00B7A948 /* RegisterViewController.swift in Sources */,
 				986E258C2A378ABF00F757AA /* LoginScreen.swift in Sources */,
 				9825E07B2A466628009A2C19 /* Utils.swift in Sources */,
 				982E7B6A2A41136A00B7A948 /* RegisterScreen.swift in Sources */,
+				98126B632A4B941C0023613E /* HomeViewController.swift in Sources */,
+				98126B652A4B94300023613E /* HomeScreen.swift in Sources */,
 				98FE2D2A2A369F8D00353565 /* AppDelegate.swift in Sources */,
 				98126B5E2A4B7B5D0023613E /* Alert.swift in Sources */,
 				98FE2D2C2A369F8D00353565 /* SceneDelegate.swift in Sources */,

@@ -36,26 +36,27 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginScreenProtocol {
     
     func actionLoginButton(_ action: TypeAction) {
-        if action == .success {
-            
-            guard let loginScreen = loginScreen else { return }
-            
-            auth?.signIn(withEmail: loginScreen.getEmail(), password: loginScreen.getPassword()) { result, error in
-                
-                guard let result = result else {
-                    self.alert?.getAlert(title: "Atenção", message: "Dados incorretos, verique e tente novamente")
-                    return
-                }
-                
-                print("Resultado do login \(result.description)")
-                
-            }
-            
-        } else {
-            let alert = UIAlertController(title: "Atenção", message: "Preencha os dois campos", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            present(alert, animated: true)
-        }
+//        if action == .success {
+//            
+//            guard let loginScreen = loginScreen else { return }
+//            
+//            auth?.signIn(withEmail: loginScreen.getEmail(), password: loginScreen.getPassword()) { result, error in
+//                
+//                guard let result = result else {
+//                    self.alert?.getAlert(title: "Atenção", message: "Dados incorretos, verique e tente novamente")
+//                    return
+//                }
+//                
+//                print("Resultado do login \(result.description)")
+//                
+//            }
+//            
+//        } else {
+//            let alert = UIAlertController(title: "Atenção", message: "Preencha os dois campos", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: .default))
+//            present(alert, animated: true)
+//        }
+        navigationController?.pushViewController(HomeViewController(), animated: true)
     }
     
     func actionRegisterButton() {

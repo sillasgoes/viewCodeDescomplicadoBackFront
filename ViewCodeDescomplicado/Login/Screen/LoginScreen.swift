@@ -71,9 +71,9 @@ class LoginScreen: UIView {
         tf.isSecureTextEntry = true
         tf.layer.cornerRadius = 7.5
         tf.layer.borderWidth = 1
+        tf.layer.position = .init(x: 4, y: 10)
         tf.keyboardType = .default
         tf.placeholder = "Digite sua senha"
-        tf.textColor = .darkGray
         return tf
     }()
     
@@ -128,10 +128,10 @@ class LoginScreen: UIView {
     }
     
     @objc func tappedLoginButton() {
-        guard Utils.Email.validate(email: emailTextField.text, password: passwordTextField.text) else {
-            delegate?.actionLoginButton(.failure)
-            return
-        }
+//        guard Utils.Email.validate(email: emailTextField.text, password: passwordTextField.text) else {
+//            delegate?.actionLoginButton(.failure)
+//            return
+//        }
         
         delegate?.actionLoginButton(.success)
     }
