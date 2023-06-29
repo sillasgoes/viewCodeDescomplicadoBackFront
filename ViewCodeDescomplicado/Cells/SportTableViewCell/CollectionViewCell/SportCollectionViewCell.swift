@@ -19,6 +19,13 @@ class SportCollectionViewCell: UICollectionViewCell {
         configConstraints()
     }
     
+    func setupCell(data: Sport) {
+        sportCollectionViewCellScreen.layer.borderWidth = 1.0
+        sportCollectionViewCellScreen.layer.borderColor = UIColor.darkGray.cgColor
+        sportCollectionViewCellScreen.sportName.text = data.name
+        sportCollectionViewCellScreen.imageView.image = UIImage(named: data.nameImage)
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

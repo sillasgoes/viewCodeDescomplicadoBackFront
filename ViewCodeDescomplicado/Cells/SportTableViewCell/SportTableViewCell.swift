@@ -10,6 +10,7 @@ import UIKit
 class SportTableViewCell: UITableViewCell {
     
     var sportTableViewCellScreen = SportTableViewCellScreen()
+    var dataSport: [Sport] = []
     
     static let identifier = "SportTableViewCell"
     
@@ -37,16 +38,21 @@ class SportTableViewCell: UITableViewCell {
             sportTableViewCellScreen.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
+    
+    func dataCollection(data: [Sport]) {
+        self.dataSport = data
+    }
 }
 
 extension SportTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return dataSport.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: SportCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: SportCollectionViewCell.identifier, for: indexPath) as? SportCollectionViewCell
+        cell?.setupCell(data: dataSport[indexPath.row])
         return cell ?? UICollectionViewCell()
     }
     

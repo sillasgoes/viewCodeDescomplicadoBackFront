@@ -8,12 +8,20 @@
 import UIKit
 
 class SportCollectionViewCellScreen: UIView {
-
-    lazy var viewBackground: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .green
-        return view
+    
+    lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    lazy var sportName: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.textColor = .darkGray
+        return label
     }()
     
     override init(frame: CGRect) {
@@ -27,15 +35,21 @@ class SportCollectionViewCellScreen: UIView {
     }
     
     func addSubView() {
-        addSubview(viewBackground)
+        addSubview(imageView)
+        addSubview(sportName)
     }
     
     func configConstraints() {
         NSLayoutConstraint.activate([
-            viewBackground.topAnchor.constraint(equalTo: topAnchor),
-            viewBackground.bottomAnchor.constraint(equalTo: bottomAnchor),
-            viewBackground.leadingAnchor.constraint(equalTo: leadingAnchor),
-            viewBackground.trailingAnchor.constraint(equalTo: trailingAnchor)
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            imageView.bottomAnchor.constraint(equalTo: sportName.topAnchor, constant: -10),
+            
+            sportName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            sportName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            sportName.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+            sportName.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
 }

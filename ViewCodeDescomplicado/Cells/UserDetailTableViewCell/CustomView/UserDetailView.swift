@@ -58,4 +58,3 @@ class UserDetailView: UIView {
         ])
     }
 }
-    

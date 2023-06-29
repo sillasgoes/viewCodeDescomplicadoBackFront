@@ -13,7 +13,7 @@ class SportTableViewCellScreen: UIView {
         let colletionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: .init())
         colletionView.translatesAutoresizingMaskIntoConstraints = false
         colletionView.showsVerticalScrollIndicator = false
-        colletionView.backgroundColor = .red
+        colletionView.backgroundColor = .none
         colletionView.delaysContentTouches = false
         var layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
