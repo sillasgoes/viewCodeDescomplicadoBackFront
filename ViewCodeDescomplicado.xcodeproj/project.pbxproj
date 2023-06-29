@@ -21,6 +21,8 @@
 		982E7B722A419EA400B7A948 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 982E7B712A419EA400B7A948 /* SnapKit */; };
 		985AC7442A42598C00672288 /* ViewCodeDescomplicadoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985AC7432A42598C00672288 /* ViewCodeDescomplicadoTests.swift */; };
 		986E258C2A378ABF00F757AA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986E258B2A378ABF00F757AA /* LoginScreen.swift */; };
+		98D760102A4DF4E800A9738D /* SportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7600F2A4DF4E800A9738D /* SportCollectionViewCell.swift */; };
+		98D760122A4DF53900A9738D /* SportCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D760112A4DF53900A9738D /* SportCollectionViewCellScreen.swift */; };
 		98EB08072A4C9DD80045A84B /* DataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EB08062A4C9DD80045A84B /* DataUser.swift */; };
 		98EB080A2A4CA6410045A84B /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EB08092A4CA6410045A84B /* UserDetailView.swift */; };
 		98EB080F2A4CE3900045A84B /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EB080E2A4CE3900045A84B /* SportTableViewCell.swift */; };
@@ -54,6 +56,8 @@
 		985AC7412A42598C00672288 /* ViewCodeDescomplicadoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewCodeDescomplicadoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		985AC7432A42598C00672288 /* ViewCodeDescomplicadoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeDescomplicadoTests.swift; sourceTree = "<group>"; };
 		986E258B2A378ABF00F757AA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		98D7600F2A4DF4E800A9738D /* SportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCollectionViewCell.swift; sourceTree = "<group>"; };
+		98D760112A4DF53900A9738D /* SportCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		98EB08062A4C9DD80045A84B /* DataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUser.swift; sourceTree = "<group>"; };
 		98EB08092A4CA6410045A84B /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		98EB080E2A4CE3900045A84B /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
@@ -189,6 +193,15 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		98D7600E2A4DF48C00A9738D /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				98D7600F2A4DF4E800A9738D /* SportCollectionViewCell.swift */,
+				98D760112A4DF53900A9738D /* SportCollectionViewCellScreen.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		98EB08042A4C70FD0045A84B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +239,7 @@
 		98EB080C2A4CE35C0045A84B /* SportTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				98D7600E2A4DF48C00A9738D /* CollectionViewCell */,
 				98EB080D2A4CE3730045A84B /* CustomView */,
 				98EB080E2A4CE3900045A84B /* SportTableViewCell.swift */,
 			);
@@ -403,6 +417,8 @@
 				982E7B682A41134B00B7A948 /* RegisterViewController.swift in Sources */,
 				98EB080A2A4CA6410045A84B /* UserDetailView.swift in Sources */,
 				986E258C2A378ABF00F757AA /* LoginScreen.swift in Sources */,
+				98D760122A4DF53900A9738D /* SportCollectionViewCellScreen.swift in Sources */,
+				98D760102A4DF4E800A9738D /* SportCollectionViewCell.swift in Sources */,
 				9825E07B2A466628009A2C19 /* Utils.swift in Sources */,
 				982E7B6A2A41136A00B7A948 /* RegisterScreen.swift in Sources */,
 				98EB080F2A4CE3900045A84B /* SportTableViewCell.swift in Sources */,

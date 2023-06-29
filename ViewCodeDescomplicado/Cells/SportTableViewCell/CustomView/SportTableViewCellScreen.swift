@@ -18,16 +18,23 @@ class SportTableViewCellScreen: UIView {
         var layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         colletionView.setCollectionViewLayout(layout, animated: false)
+        colletionView.register(SportCollectionViewCell.self, forCellWithReuseIdentifier: SportCollectionViewCell.identifier)
         return colletionView
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubView()
+        configConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configProtocolCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        colletctionView.delegate = delegate
+        colletctionView.dataSource = dataSource
     }
     
     func addSubView() {
@@ -41,5 +48,5 @@ class SportTableViewCellScreen: UIView {
             colletctionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             colletctionView.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])
-     }
+    }
 }
